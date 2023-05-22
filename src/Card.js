@@ -11,7 +11,7 @@ let cardData =[
         'ratingCount': 6,
         'location': 'USA',
         'courseName': 'Life lessons with Katie Zaferes',
-        'cost': 'From $136',
+        'cost': 136,
         'costPer': '/ person'
     },
     {
@@ -21,7 +21,7 @@ let cardData =[
         'ratingCount': 30,
         'location': 'USA',
         'courseName': 'Learn wedding photography',
-        'cost': 'From $125',
+        'cost': 125,
         'costPer': '/ person'
     },
     {
@@ -31,7 +31,7 @@ let cardData =[
         'ratingCount': 2,
         'location': 'USA',
         'courseName': 'Group Mountain Biking',
-        'cost': 'From $50',
+        'cost': 50,
         'costPer': '/ person'
     }
 ]
@@ -52,7 +52,7 @@ function Card(props){
                 <p className='text-lg text-[#222222] font-light'>{props.data.courseName}</p>
             </div>
             <div className='md:mb-8'>
-                <p className='text-lg text-[#222222] font-light'><span className='font-bold'>{props.data.cost}</span> {props.data.costPer}</p>
+                <p className='text-lg text-[#222222] font-light'><span className='font-bold'>From ${props.data.cost}</span> {props.data.costPer}</p>
             </div>
             </div>
         </div>
