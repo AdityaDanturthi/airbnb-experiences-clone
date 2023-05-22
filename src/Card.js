@@ -61,11 +61,10 @@ function Card(props){
 
 
 export default function CardWithData(){
+    const cards = cardData.map(card => <Card data = {card}/>)
     return(
         <div className='sm:grid sm:grid-cols-1 md:grid md:grid-cols-3'>
-            <div><Card data = {cardData[0]} /></div>
-            <div><Card data = {cardData[1]} /></div>
-            <div><Card data = {cardData[2]} /></div>
+            {cards}
         </div>
     );
 }
