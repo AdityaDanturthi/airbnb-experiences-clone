@@ -43,7 +43,7 @@ function Card(props){
             <span className='inset-auto absolute mt-1.5 ml-1.5 bg-white px-1.5 py-1 rounded'>{props.data.statusText}</span>
             <img src={props.data.mainImg} className='w-[264px] h-[353px] rounded-xl'/>
             <div className='flex flex-row gap-2 items-center mt-2 text-lg leading-none'>
-                    <img src={star} />
+                    <img src={star}/>
                     <p>{props.data.rating}</p>
                     <p className='text-[#918E9B]'>({props.data.ratingCount})</p>
                     <p className='text-[#918E9B]'>&middot; {props.data.location}</p>
