@@ -12,7 +12,8 @@ let cardData =[
         'location': 'USA',
         'courseName': 'Life lessons with Katie Zaferes',
         'cost': 136,
-        'costPer': '/ person'
+        'costPer': '/ person',
+        'openSpots': 0
     },
     {
         'mainImg': weddingPhotography,
@@ -22,7 +23,8 @@ let cardData =[
         'location': 'USA',
         'courseName': 'Learn wedding photography',
         'cost': 125,
-        'costPer': '/ person'
+        'costPer': '/ person',
+        'openSpots': 4
     },
     {
         'mainImg': mountainBike,
@@ -32,15 +34,22 @@ let cardData =[
         'location': 'USA',
         'courseName': 'Group Mountain Biking',
         'cost': 50,
-        'costPer': '/ person'
+        'costPer': '/ person',
+        'openSpots': 0
     }
 ]
 
 function Card(props){
+    let badgeText;
+    if (props.data.openSpots === 0){
+        badgeText = 'SOLD OUT';
+    } else if (props.data.openSpots >0){
+        badgeText = 'AVAILABLE';
+    }
     return(
         <div className='flex justify-center mb-4'>
         <div className='md:mt-12 font-poppins'>
-            <span className='inset-auto absolute mt-1.5 ml-1.5 bg-white px-1.5 py-1 rounded'>{props.data.statusText}</span>
+            {badgeText && <span className='inset-auto absolute mt-1.5 ml-1.5 bg-white px-1.5 py-1 rounded'>{badgeText}</span>}
             <img src={props.data.mainImg} className='w-[264px] h-[353px] rounded-xl'/>
             <div className='flex flex-row gap-2 items-center mt-2 text-lg leading-none'>
                     <img src={star}/>
